@@ -7,7 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
           <Link to="/" className="flex items-center gap-3 mb-6">
-            <img src="/soft-distro.png" alt="Soft-Distro" className="w-8 h-8" />
+            {/* Yahan logo ka path 100% fix kar diya gaya hai */}
+            <img 
+              src={`${import.meta.env.BASE_URL}soft-distro.png`} 
+              alt="Soft-Distro Logo" 
+              className="w-8 h-8 object-contain" 
+              onError={(e) => e.target.style.display = 'none'} 
+            />
             <span className="font-display font-bold text-xl">SOFT-DISTRO</span>
           </Link>
           <p className="text-gray-400 text-sm mb-6">Building world-class digital experiences for enterprise leaders and global innovators.</p>
