@@ -18,3 +18,23 @@ body {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3b82f6] to-purple-500;
   }
 }
+@layer utilities {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+  }
+  .text-gradient-ios {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/30;
+  }
+}
+
+@layer components {
+  .ios-input {
+    @apply w-full bg-black/5 border-b-2 border-black/10 px-4 py-4 focus:outline-none focus:border-black transition-all placeholder:text-gray-400 font-medium text-lg rounded-t-xl hover:bg-black/[0.08];
+  }
+  .three-d-shadow {
+    box-shadow: 
+      0 10px 20px rgba(0,0,0,0.1), 
+      0 6px 6px rgba(0,0,0,0.1),
+      0 0 100px rgba(0,242,255,0.05);
+  }
+}
